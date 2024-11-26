@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: "Times New Roman", serif;
+            background: linear-gradient(135deg, #020024, #090979, #00d4ff); /* Galaxy gradient */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 600;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff69b4;
+        }
+
+        /* Header */
+        h1 {
+            font-family: "Times New Roman", serif;
+            font-size: 2.5rem;
+            margin-top: 80px; /* Leave space for the fixed navbar */
+            margin-bottom: 20px;
+            color: #ffccff;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Project Section */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-box {
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 90%; /* Responsive width */
+            max-width: 600px; /* Limit max width */
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-box:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .project-box h2 {
+            font-size: 1.5rem;
+            color: #ffccff;
+            margin-bottom: 10px;
+        }
+
+        .project-box p {
+            margin: 5px 0;
+            color: #ddd;
+        }
+
+        .project-box a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .project-box a:hover {
+            color: #ff69b4;
+        }
+
+        .project-box .highlight {
+            font-weight: 600;
+            color: #ff69b4;
+        }
+
+        .project-box .tech-stack {
+            font-size: 0.95rem;
+            color: #00bfff;
+            margin-top: 10px;
+        }
+
+        /* Galaxy Stars Effect */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        /* Star Animation */
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 0.9em;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-top: 60px; /* Adjusted for smaller screens */
+            }
+
+            .project-box {
+                width: 95%; /* Take more width for smaller screens */
+                padding: 15px;
+            }
+
+            .project-box h2 {
+                font-size: 1.3rem;
+            }
+
+            .project-box .tech-stack {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 0.85em;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-top: 50px;
+            }
+
+            .project-box {
+                padding: 10px;
+            }
+
+            .project-box h2 {
+                font-size: 1.2rem;
+            }
+
+            .project-box .tech-stack {
+                font-size: 0.8rem;
+            }
+
+            .project-box a {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index">Home</a>
+        <a href="about-me">About Me</a>
+        <a href="education">Education</a>
+        <a href="projects">Projects</a>
+        <a href="certifications">Certifications</a>
+        <a href="skills">Technical skills</a>
+        <a href="contact">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <h1>Projects</h1>
+
+    <!-- Project Details -->
+    <div class="projects">
+        <!-- Repeatable Project Boxes -->
+        <div class="project-box">
+            <h2>Car Service System (Sep 2024 - Nov 2024)</h2>
+            <p>Developed and implemented a Car Service system using <span class="highlight">Java</span> and <span class="highlight">JDBC</span> to handle backend processes for car service bookings, customer details, and history.</p>
+            <p class="tech-stack">Tech stack: Java, JDBC, HTML5, CSS, MySQL</p>
+            <a href="https://github.com/MONISHAS-27/car-service-system" target="_blank">View Source Code</a>
+        </div>
+        <div class="project-box">
+            <h2>Enhanced Automatic Short Answer Grading System (Feb 2024 - May 2024)</h2>
+            <p>Developed and implemented an Automatic Short Answer Grading system using the <span class="highlight">BERT model</span> and <span class="highlight">Bi-LSTM network</span>. By incorporating these models we eliminated the issue of data limitations in corpus and achieved 93% of accuracy in improving the grading of the students' answers.</p>
+            <p class="tech-stack">Tech stack: Python, Django, Keras, TensorFlow, NLTK, Gensim, Numpy, Pandas, HTML5</p>
+            <a href="https://github.com/MONISHAS-27/Automatic-short-answer-grading-system" target="_blank">View Source code</a>
+        </div>
+        
+        <div class="project-box">
+            <h2>Enhancing the Recommendation system(Jan 2023 - May 2023)</h2>
+            <p>Developed and implemented the Recommendation system by using Back Propagation neural network 
+model with an attention mechanism <span class="highlight">BPAM++</span>. This work helps to improve the accuracy of the prediction of the 
+recommendation system while reducing the computational, storage costs, and overfitting issues.</p>
+            <p class="tech-stack">Tech stack: Python, Django, Keras, TensorFlow-Attention, Pandas, NumPy, Matpliolib.</p>
+            <a href="https://github.com/MONISHAS-27/Automatic-short-answer-grading-system" target="_blank">View Source code</a>
+        </div>
+    </div>
+        <!-- Add more projects as needed -->
+ 
+
+    <!-- Starry Background -->
+    <script>
+        function createStars() {
+            const starContainer = document.body;
+
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement("div");
+                star.classList.add("star");
+                const size = Math.random() * 3 + 1; // Random size for stars
+                const positionX = Math.random() * 100; // Random position X (percentage)
+                const positionY = Math.random() * 100; // Random position Y (percentage)
+                const animationDelay = Math.random() * 5; // Random animation delay
+
+                star.style.width = size + "px";
+                star.style.height = size + "px";
+                star.style.left = positionX + "%";
+                star.style.top = positionY + "%";
+                star.style.animationDelay = animationDelay + "s";
+
+                starContainer.appendChild(star);
+            }
+        }
+
+        window.onload = createStars; // Create stars when the page loads
+    </script>
+</body>
+</html>

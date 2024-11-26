@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 600;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff69b4;
+        }
+
+        /* Moving Galaxy Background Color Gradient */
+        #home {
+            position: relative;
+            overflow: hidden;
+            height: 110vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            background: linear-gradient(45deg, #4A1F8C, #00173B, #001e4f, #110145);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+        }
+
+        /* Gradient Movement Animation */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #home h1 {
+            font-size: 2.5em;
+            color: #ffccff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.5);
+        }
+
+        #home p {
+            font-size: 1.2em;
+            color: #add8e6;
+        }
+
+        #home img {
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+            margin-right: 30px;
+        }
+
+        /* Star Twinkle Effect */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffa07a;
+            text-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+        }
+
+        .section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 0.9em;
+                margin: 0 10px;
+            }
+
+            #home {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #home img {
+                max-width: 200px;
+                margin: 10px 0;
+            }
+
+            #home h1 {
+                font-size: 2em;
+            }
+
+            #home p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 0.8em;
+            }
+
+            #home h1 {
+                font-size: 1.8em;
+            }
+
+            #home p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+  <nav>
+        <a href="index">Home</a>
+        <a href="about-me">About Me</a>
+        <a href="education">Education</a>
+        <a href="projects">Projects</a>
+        <a href="certifications">Certifications</a>
+        <a href="skills">Technical skills</a>
+        <a href="contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <img src="monipf3.jpeg" alt="Your Picture">
+        <div>
+            <h1>Welcome to My Universe!</h1>
+            <p>Hello✨, I'm Monisha. A Java developer with a passion for exploring infinite possibilities!</p>
+        </div>
+    </section>
+
+    <script>
+        // Function to create stars
+        function createStars() {
+            const starContainer = document.getElementById("home");
+
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement("div");
+                star.classList.add("star");
+                const size = Math.random() * 3 + 1; // Random size for stars
+                const positionX = Math.random() * 100; // Random position X (percentage)
+                const positionY = Math.random() * 100; // Random position Y (percentage)
+                const animationDelay = Math.random() * 5; // Random animation delay
+
+                star.style.width = size + "px";
+                star.style.height = size + "px";
+                star.style.left = positionX + "%";
+                star.style.top = positionY + "%";
+                star.style.animationDelay = animationDelay + "s";
+                
+                starContainer.appendChild(star);
+            }
+        }
+
+        // Create stars when the page loads
+        window.onload = createStars;
+    </script>
+
+</body>
+</html>

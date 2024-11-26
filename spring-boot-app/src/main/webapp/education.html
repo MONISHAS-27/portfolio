@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: "Times New Roman", serif;
+            background: linear-gradient(135deg, #020024, #090979, #00d4ff); /* Galaxy gradient */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: "Times New Roman", serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 70px; /* Leave space for the fixed navbar */
+            color: #ffccff;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 600;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff69b4;
+        }
+
+        /* Timeline Container */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        /* Timeline Item */
+        .timeline-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 30px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Alternate Timeline Layout */
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        /* Timeline Box */
+        .timeline-box {
+            width: 45%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .timeline-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Year Box */
+        .year-box {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff007f;
+            padding: 10px 20px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Timeline Content */
+        .timeline-content h2,
+        .timeline-content h3 {
+            color: #ff99cc;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Galaxy Stars Effect */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        /* Star Animation */
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) {
+                flex-direction: column; /* Remove alternation for small screens */
+            }
+
+            .timeline-box {
+                width: 90%; /* Full width for smaller screens */
+                text-align: center;
+            }
+
+            .year-box {
+                top: -15px;
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .timeline-box {
+                padding: 15px;
+            }
+
+            .year-box {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index">Home</a>
+        <a href="about-me">About Me</a>
+        <a href="education">Education</a>
+        <a href="projects">Projects</a>
+        <a href="certifications">Certifications</a>
+        <a href="skills">Technical skills</a>
+        <a href="contact">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <h1>Education</h1>
+
+    <!-- Timeline -->
+    <div class="timeline">
+        <!-- Timeline Items -->
+        <div class="timeline-item">
+            <div class="year-box">
+                <span>2020-2024</span>
+            </div>
+            <div class="timeline-box">
+                <div class="timeline-content">
+                    <h2>BE in Computer Science</h2>
+                    <h3>University College of Engineering, Tindivanam</h3>
+                    <p>Graduated with an 8.06 CGPA.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year-box">
+                <span>2019-2020</span>
+            </div>
+            <div class="timeline-box">
+                <div class="timeline-content">
+                    <h2>HSC</h2>
+                    <h3>Municipal Girls Higher Secondary School, Tiruvannamalai</h3>
+                    <p>Completed 12th with 73.50%.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year-box">
+                <span>2017-2018</span>
+            </div>
+            <div class="timeline-box">
+                <div class="timeline-content">
+                    <h2>SSLC</h2>
+                    <h3>Municipal Girls Higher Secondary School, Tiruvannamalai</h3>
+                    <p>Completed 10th with 88.40%.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Starry Background -->
+    <script>
+        function createStars() {
+            const starContainer = document.body;
+
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement("div");
+                star.classList.add("star");
+                const size = Math.random() * 3 + 1; // Random size for stars
+                const positionX = Math.random() * 100; // Random position X (percentage)
+                const positionY = Math.random() * 100; // Random position Y (percentage)
+                const animationDelay = Math.random() * 5; // Random animation delay
+
+                star.style.width = size + "px";
+                star.style.height = size + "px";
+                star.style.left = positionX + "%";
+                star.style.top = positionY + "%";
+                star.style.animationDelay = animationDelay + "s";
+
+                starContainer.appendChild(star);
+            }
+        }
+
+        window.onload = createStars;
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Section</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Galaxy background theme */
+    body {
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #020024, #090979, #00d4ff); /* Galaxy gradient */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: 600;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff69b4;
+    }
+
+    h1 {
+      font-family: 'Times New Roman', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffccff;
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .contact-section h1 {
+      color: #ff4747;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .left-side {
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .profile-image {
+      max-width: 250px;
+      border-radius: 10%;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+      margin-right: 30px;
+      z-index: 10;
+    }
+
+    .left-side p {
+      font-size: 1rem;
+      margin: 15px 0;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .resume-button {
+      background-color: #ff4747;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .resume-button:hover {
+      background-color: #e63e3e;
+    }
+
+    .right-side {
+      max-width: 400px;
+    }
+
+    .right-side h2 {
+      margin-bottom: 15px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Galaxy Stars Effect */
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+      .left-side, .right-side {
+        max-width: 100%;
+        margin: 0 0 20px 0;
+      }
+      .profile-image {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+      .resume-button {
+        width: 100%;
+        padding: 15px;
+      }
+      nav a {
+        font-size: 1em;
+        margin: 0 10px;
+      }
+      .right-side h2 {
+        font-size: 1.3rem;
+      }
+      form input, form textarea {
+        font-size: 0.9rem;
+      }
+      form button {
+        font-size: 1rem;
+      }
+      .social-icons a {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      nav a {
+        font-size: 0.9em;
+        margin: 0 8px;
+      }
+      .right-side h2 {
+        font-size: 1.2rem;
+      }
+      form input, form textarea {
+        font-size: 0.8rem;
+      }
+      form button {
+        font-size: 0.9rem;
+      }
+      .social-icons a {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index">Home</a>
+    <a href="about-me">About Me</a>
+    <a href="education">Education</a>
+    <a href="projects">Projects</a>
+    <a href="certifications">Certifications</a>
+    <a href="skills">Technical skills</a>
+    <a href="contact">Contact</a>
+  </nav>
+
+  <div class="contact-section">
+    <h1>Contact Me</h1>
+    <div class="contact-container">
+      <div class="left-side">
+        <img src="monis.jpg" alt="Profile" class="profile-image">
+        <p>If you are interested in my skills, please contact me.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/monisha-s-84903626a/"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/MONISHAS-27?tab=repositories"><i class="fa fa-github"></i></a>
+          <a href="mailto:monishas2711@gmail.com"><i class="fa fa-at"></i></a>
+        </div>
+      </div>
+      <div class="right-side">
+        <h2>Have a question or just want to say hello? Let's connect!</h2>
+        <form action="mailto:monishas2711@gmail.com">
+          <input type="text" placeholder="Name" name="name" required>
+          <input type="email" placeholder="Email" name="email" required>
+          <textarea placeholder="Message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function createStars() {
+      const starContainer = document.body;
+
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        const size = Math.random() * 3 + 1;
+        const positionX = Math.random() * 100;
+        const positionY = Math.random() * 100;
+        const animationDelay = Math.random() * 5;
+
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+        star.style.left = positionX + "%";
+        star.style.top = positionY + "%";
+        star.style.animationDelay = animationDelay + "s";
+
+        starContainer.appendChild(star);
+      }
+    }
+
+    window.onload = createStars; // Create stars when the page loads
+  </script>
+</body>
+</html>

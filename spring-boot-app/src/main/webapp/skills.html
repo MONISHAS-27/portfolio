@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Skills - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: times-new-roman;
+            background: radial-gradient(circle at center, #020024, #090979, #00d4ff);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 600;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff69b4;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 80px;
+            color: #ffccff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px 20px;
+            padding: 20px;
+        }
+
+        .skill-card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            width: 280px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .skill-card h2 {
+            font-size: 1.5rem;
+            color: #ffccff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .skill-card ul {
+            padding: 0;
+            list-style: none;
+            text-align: left;
+        }
+
+        .skill-card ul li {
+            margin: 5px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .skill-card ul li::before {
+            content: "•";
+            color: #ff69b4;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .skill-card ul li .highlight {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+
+        /* Pulsating Background */
+        @keyframes pulsate {
+            0% {
+                box-shadow: 0 0 20px rgba(0, 0, 255, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 0, 255, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(0, 0, 255, 0.3);
+            }
+        }
+
+        .skill-card:hover {
+            animation: pulsate 1.5s infinite;
+        }
+
+        /* Galaxy Stars Effect */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        /* Star Animation */
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .skills-container {
+                margin: 50px 10px;
+            }
+
+            .skill-card {
+                width: 220px;
+                padding: 15px;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .skills-container {
+                margin: 30px 10px;
+            }
+
+            .skill-card {
+                width: 100%;
+                padding: 10px;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+
+            nav a {
+                margin: 10px 0;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index">Home</a>
+        <a href="about-me">About Me</a>
+        <a href="education">Education</a>
+        <a href="projects">Projects</a>
+        <a href="certifications">Certifications</a>
+        <a href="skills">Technical Skills</a>
+        <a href="contact">Contact</a>
+    </nav>
+
+    <h1>Technical Skills</h1>
+
+    <div class="skills-container">
+        <!-- Java and Python first (on top) -->
+        <div class="skill-card">
+            <h2>Java</h2>
+            <ul>
+                <li>Proficient in <span class="highlight">arrays</span> and data manipulation.</li>
+                <li>Strong understanding of <span class="highlight">OOP concepts</span> in Java.</li>
+                <li>Experienced in using <span class="highlight">interfaces</span> in Java to define abstract methods and constants.</li>
+                <li>Experienced with <span class="highlight">multi-threading</span> for performance improvement.</li>
+                <li>Familiar with Java collections like <span class="highlight">List, Set,</span> and <span class="highlight">Map</span>.</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h2>Python</h2>
+            <ul>
+                <li>Strong grasp of object-oriented programming (OOP) in Python.</li>
+                <li>Proficient in writing clean and modular Python code using <span class="highlight">functions, classes, and modules</span>.</li>
+                <li>Strong understanding of Python data structures like <span class="highlight">lists, dictionaries, tuples,</span> and <span class="highlight">sets.</span></li>
+                <li>Experienced in using Python libraries like NumPy, Pandas, and Matplotlib for data analysis and visualization.</li>
+            </ul>
+        </div>
+
+        <!-- HTML, CSS, and SQL boxes placed after Java and Python (on bottom) -->
+        <div class="skill-card">
+            <h2>SQL</h2>
+            <ul>
+                <li>Experienced with <span class="highlight">complex queries</span> and data manipulation.</li>
+                <li>Proficient in using <span class="highlight">joins</span> and subqueries for relational data.</li>
+                <li>Skilled in using <span class="highlight">aggregate functions</span> for data analysis.</li>
+                <li>Familiar with enforcing data integrity using <span class="highlight">constraints</span></li>
+                <li>Strong understanding of indexes, views, clauses, triggers, and stored procedures.</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h2>HTML</h2>
+            <ul>
+                <li>Experienced in writing <span class="highlight">semantic HTML</span> for clean structure.</li>
+                <li>Proficient in using <span class="highlight">attributes</span> for interactivity.</li>
+                <li>Skilled in creating forms and integrating multimedia content.</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h2>CSS</h2>
+            <ul>
+                <li>Expert in <span class="highlight">responsive design</span> with CSS Grid and Flexbox.</li>
+                <li>Skilled in applying <span class="highlight">animations</span> and transitions.</li>
+                <li>Proficient in visual styling with colors, fonts, and layouts.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function createStars() {
+            const starContainer = document.body;
+
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement("div");
+                star.classList.add("star");
+                const size = Math.random() * 3 + 1; // Random size for stars
+                const positionX = Math.random() * 100; // Random position X (percentage)
+                const positionY = Math.random() * 100; // Random position Y (percentage)
+                const animationDelay = Math.random() * 5; // Random animation delay
+
+                star.style.width = size + "px";
+                star.style.height = size + "px";
+                star.style.left = positionX + "%";
+                star.style.top = positionY + "%";
+                star.style.animationDelay = animationDelay + "s";
+
+                starContainer.appendChild(star);
+            }
+        }
+
+        window.onload = createStars; // Create stars when the page loads
+    </script>
+</body>
+</html>

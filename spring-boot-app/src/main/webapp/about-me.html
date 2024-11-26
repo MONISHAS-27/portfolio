@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(135deg, #020024, #090979, #00d4ff); /* Galaxy gradient */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 600;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff69b4;
+        }
+
+        /* Header */
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffccff;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Main Content Container */
+        .content {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 20px 0;
+            color: #ddd;
+            text-align: justify;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        .content p:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .content p:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        /* Highlighted Words */
+        .highlight {
+            font-weight: 600;
+            color: #ffccff;
+        }
+
+        /* Galaxy Stars Effect */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        /* Star Animation */
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            nav a {
+                font-size: 0.8em;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index">Home</a>
+        <a href="about-me">About Me</a>
+        <a href="education">Education</a>
+        <a href="projects">Projects</a>
+        <a href="certifications">Certifications</a>
+        <a href="skills">Technical Skills</a>
+        <a href="contact">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <h1>About Me</h1>
+
+    <!-- Main Content -->
+    <div class="content">
+        <p>I'm an <span class="highlight">Enthusiastic</span> and <span class="highlight">Detail-Oriented</span> computer science graduate with a strong foundation in 
+            <span class="highlight">Java</span>, <span class="highlight">Python</span>, <span class="highlight">Manual Testing</span>, <span class="highlight">SQL</span>, and <span class="highlight">Web Development</span>.
+        </p>
+
+        <p>I bring a blend of <span class="highlight">creativity</span>, <span class="highlight">problem-solving</span>, strong <span class="highlight">collaborative skills</span> and <span class="highlight">organizational skills</span>, a hunger for learning, and a drive to make an impact.
+        </p>
+
+        <p><span class="highlight">Painting</span> is one of my favorite hobbies. I believe that my hobby has helped me to approach problems with a <span class="highlight">creative mindset</span>. It also helped me to develop strong <span class="highlight">attention to detail</span>, allowing me to catch <span class="highlight">errors</span> and <span class="highlight">bugs</span> in code easily.
+        </p>
+    </div>
+
+    <!-- Starry Background Effect -->
+    <script>
+        function createStars() {
+            const starContainer = document.body;
+
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement("div");
+                star.classList.add("star");
+                const size = Math.random() * 3 + 1; // Random size for stars
+                const positionX = Math.random() * 100; // Random position X (percentage)
+                const positionY = Math.random() * 100; // Random position Y (percentage)
+                const animationDelay = Math.random() * 5; // Random animation delay
+
+                star.style.width = size + "px";
+                star.style.height = size + "px";
+                star.style.left = positionX + "%";
+                star.style.top = positionY + "%";
+                star.style.animationDelay = animationDelay + "s";
+                
+                starContainer.appendChild(star);
+            }
+        }
+
+        window.onload = createStars; // Create stars when the page loads
+    </script>
+</body>
+</html>
